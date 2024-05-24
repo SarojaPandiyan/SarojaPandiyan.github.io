@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Resume</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica;
+            background-color: black;
+            scroll-behavior: smooth;
+        }
+        header {
+            height: 60px;
+            width: 100%;
+            background-color: whitesmoke;
+            color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            z-index: 1000;
+            font-size: 20px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            position: relative;
+            margin-top: 10px;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            left: 0;
+            bottom: -2px;
+            transition: width 0.4s;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .field-box, .field1 {
+            height: auto;
+            width: 1100px;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            flex-direction: row;
+        }
+        .text {
+            flex: 1;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+        .text h3 {
+            text-align: center;
+            margin-top: 0;
+        }
+        .text p {
+            margin-top: 10px;
+            height: 25px;
+        }
+        .photo {
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 50px;
+        }
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10%;
+        }
+        section {
+            padding-top: 120px; /* Adjust this value to control the space before each section */
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 15px;
+        }
+        .skills-category {
+            flex: 1;
+            min-width: 200px;
+            font-size: 18px;
+        }
+        .skills-category strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .skills-category ul {
+            list-style: none;
+            padding: 0;
+        }
+        .skills-category ul li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .skills-category ul li::before {
+            content: '\2713'; /* Unicode for tick mark */
+            position: absolute;
+            left: 0;
+            color: green;
+        }
+        .skills-category img {
+            width:150px;
+            height: 150px;
+            margin-top: 10px;
+        }
+        .achievement {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            font-size: 20px;
+            color: green;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .description {
+            flex: 1;
+        }
+        .container1 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .image {
+            width: 30%; /* Adjust as needed */
+            margin: 10px;
+        }
+
+        .image img {
+            width: 100%;
+            height: 80%;
+        }
+        
+        ul {
+        list-style-type: none;
+        padding: 0;
+        }
+
+        ul li {
+        position: relative;
+        padding-left: 30px; /* Adjust as needed */
+        margin-bottom: 10px; /* Adjust as needed */
+        }
+
+        ul li::before {
+        content: "\25B6"; /* Unicode for right-pointing triangle */
+        position: absolute;
+        left: 0;
+        color: green; /* Adjust color as needed */
+        }
+        .sub-list{
+            padding:10px;
+            list-style-type: circle;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#Active Interests and Participations">Active Interests and Participations</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="about">
+        <div class="field-box">
+            <div class="text">
+                <h3>About</h3>
+                <p><strong>Full Name:</strong> Saroja . P</p>
+                <p><strong>Date of Birth:</strong> August 25, 2004</p>
+                <p><strong>Nationality:</strong> Indian</p>
+                <p><strong>Proficient in:</strong> Tamil, English</p>
+                <p><strong>Institution:</strong> Thiagarajar College of Engineering, Madurai.</p>
+                <p><strong>Degree Program:</strong> Bachelor of Technology in Information Technology</p>
+            </div>
+            <div class="photo">
+                <img src="C:\\Users\\saroj\\Pictures\\Sem 4\\Hostel day\\IMG-20240323-WA0109.jpg" alt="Your Photo">
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="field1">
+            <div class="text">
+                <center><h2>Skills</h2></center>
+                <div class="skills-container">
+                    <div class="skills-category">
+                        <strong>Front end</strong>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <strong>Programming Languages</strong>
+                        <ul>
+                            <li>Java</li>
+                            <li>C++</li>
+                            <li>C</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <strong>Database Languages</strong>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>Oracle SQL</li>
+                        </ul><br>
+                    </div>
+                    <div class="skills-category">
+                        <strong>Tools</strong>
+                        <ul>
+                            <li>VS Code</li>
+                            <li>Cisco Packet Tracer</li>
+                            <li>Wireshark</li>
+                            <li>Arduino IDE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="achievements">
+        <div class="field1">
+            <div class="text">
+                <h3>Achievements</h3>
+                <div class="achievement">
+                    <div class="icon">&#x2713;</div>
+                    <div class="description">Developed a basic student mark management system using Tkinter, Numpy, and Pandas in Python.</div>
+                </div>
+                <div class="achievement">
+                    <div class="icon">&#x2713;</div>
+                    <div class="description">Designed an online learning website.</div>
+                </div>
+                <div class="achievement">
+                    <div class="icon">&#x2713;</div>
+                    <div class="description">Worked on a contactless fingerprint authentication system, addressing issues in contact-based fingerprint authentication.</div>
+                </div>
+                <div class="achievement">
+                    <div class="icon">&#x2713;</div>
+                    <div class="description">Developed an ML-based cloud burst prediction system for predicting sudden heavy rainfall and that is selected for the Final round of IETSC’s Sustainable Technovation Expo 2k24</div>
+                </div>
+                <div class="achievement">
+                    <div class="icon">&#x2713;</div>
+                    <div class="description">Our Li-Fi based communication system was selected for the final round of 'Pragyan – Ingenium', a National Level hackathon at NIT Trichy.</div>
+                </div>
+                <div class="container1">
+                    <div class="image">
+                        <img src="D:\\Courses and certificates\\Resume\\Picture1.png" alt="Image 1">
+                    </div>
+                    <div class="image">
+                        <img src="D:\\Courses and certificates\\Resume\\WhatsApp Image 2024-01-17 at 20.00.31_c6f2482f.jpg" alt="Image 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="Active Interests and Participations">
+        <div class="field1">
+            <div class="text">
+                <h3>Active Interests and Participations</h3>
+                <ul>
+                    <li>Member of the NSS (National Service Scheme) volunteering program</li>
+                    <li>Active participant in the Coders Club</li>
+                    <li>Officer bearer in the Mobile Development Club</li>
+                    <li>Member of IETSC Chapter</li>
+                    <li>Member of the Tamil Club, contributing to cultural events</li>
+                    <li>Passionate about singing, crafting, and drawing</li>
+                    <li>Attended a workshop in NIT Trichy on Big Data Computing</li>
+                    <li><strong>Domain of Interest:</strong>
+                        <ul class="sub-list">
+                            <li>Machine Learning</li>
+                            <li>Cyber Security</li>
+                            <li>Internet of Things</li>
+                            <li>Web Development</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="field1">
+            <div class="text">
+                <h3>Contact</h3>
+                <p><strong>Email:</strong> <a href="mailto:sarojap@student.tce.edu">sarojap@student.tce.edu</a></p>
+                <p><strong>LinkedIn:</strong> <a href=https://www.linkedin.com/in/saroja-pandiyan-489993293>Saroja Pandiyan</a></p>
+                <p><strong>GitHub:</strong> <a href=https://github.com/SarojaPandiyan>SarojaPandiyan</a></p>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
